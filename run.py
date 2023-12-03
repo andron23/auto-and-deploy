@@ -38,7 +38,6 @@ database = PGDatabase(
 
 for i, row in sales_df.iterrows():
     query = f"insert into sales values ('{row['dt']}', '{row['company']}', '{row['transaction_type']}', {row['amount']})"
-    print(query)
     database.post(query)
 
 
